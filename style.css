@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap');
+
+:root {
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --white: hsl(0, 0%, 100%);
+    --very-dark-blue: hsl(215, 32%, 27%);
+    --sofy-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --cyan-overlay: hsla(178, 100%, 50%, 0.5);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-bg);
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--sofy-blue);
+}
+img {
+    width: 100%;
+}
+.card_container {
+    background-color: var(--card-bg);
+    width: 380px;
+    padding: 18px;
+    border-radius: 15px;
+}
+.image {
+    position: relative;
+    width: 100%;
+}
+.card_image {
+    border-radius: 10px;
+    display: block;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .3s ease;
+    background-color: var(--cyan-overlay);
+}
+.image:hover .overlay{
+    opacity: 1;
+}
+.overlay .icon {
+    position: absolute;
+    width: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.card_container h1 {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 15px;
+
+}
+.card_container h1:hover {
+    color: var(--cyan);
+}
+.card_container p {
+    color: var(--sofy-blue);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+}
+
+.card_spans {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--sofy-blue);
+    padding-bottom: 15px;
+}
+.card_spans  .icon {
+    width: 17px;
+    margin-right: 2px;
+}
+.card_span1 {
+    color: var(--cyan);
+}
+.card_footer {
+    display: flex;
+}
+.card_footer img {
+    width: 30px;
+}
+.card_footer {
+    color: var(--sofy-blue);
+    margin-top: 15px;
+
+}
+.card_footer .card_span_white {
+    color: var(--white);
+    
+}
+.card_footer .card_span_white:hover {
+    color: var(--cyan);
+    
+}
+.card_footer img {
+    margin-right: 15px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
